@@ -24,8 +24,8 @@ library(janitor)
 #### (This task accomplishes reading raw data)
 
 apps_raw <- read_csv("data/raw/apps_platform.csv")
-## use read_csv because the function is literally reading the csv file.
-## The green text displays the RELATIVE path to the selected file.
+#### use read_csv because the function is literally reading the csv file.
+#### The green text displays the RELATIVE path to the selected file.
 
 ## 1. Review, then clean up the FIRST DATA SET .
 # Clean the raw apps data: Select useful columns, standardize names, 
@@ -41,6 +41,24 @@ apps_clean <- apps_raw |>
 write_rds(apps_clean, "data/processed/apps_clean.rds") #Save into R's standard format
 
 
+## Step 3: Read in [RAW] engagement data (second data file) - daily metrics 
+## from podcast launch to present
+engagement_raw <- read_csv("data/raw/engagement_daily.csv")
 
+# Clean the RAW engagement data: select useful columns, standardize names,
+# convert dates, remove the incomplete row, and sort chronologically
+engagement_clean <- engagement_raw |>
+  select(
+    Date, 
+    `Consumption time (hours)`, 
+    `Average consumption time (hours)`, 
+    Comments, 
+    Followers) |>    # Keep only real data columns; drop 2 empty columns
+  janitor::clean_names() |>    # Standardize column names into lowercase & snake_case
+  mutate(date = mdy(date)) |>    # Convert date from text to actual date format using lubridate package
+  drop_na() |>    # Remove rows with any NA values (day with no data)
+  arrange(date)
 
+# Export cleaned engagement data as .rds (R's standard format)
+write_rds(engagement_clean, "data/processed/engagement_clean.rds")
 
