@@ -45,7 +45,7 @@ Cleaned data is located in `data/processed/`:
 Exported figures are located in `figures/`:
 
 - `follower_growth.png` — Follower growth over time
-- `monthly_consumption.png` — Monthly consumption time
+- `engagement_metrics.png` — Daily engagement metrics (comments and consumption time)
 - `platform_distribution.png` — Listener distribution by streaming platform
 
 
