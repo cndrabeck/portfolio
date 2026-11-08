@@ -19,9 +19,11 @@ Spotify for Creators (https://creators.spotify.com):
 
 - `engagement_daily.csv` — Daily engagement metrics (consumption time, 
   average consumption time, comments, followers) from August 15, 2025 
-  to September 29, 2026
+  to November 8, 2026
 - `apps_platform.csv` — Listener distribution across streaming platforms 
-  (all-time, August 15, 2025 to September 29, 2026)
+  (all-time, August 15, 2025 to November 8, 2026)
+- `geolocation.csv` — Listener distribution by country (August 1, 2025 to
+   August 1, 2026)
 
 ### R Scripts
 
@@ -32,6 +34,9 @@ R scripts are located in `scripts/`:
 - `scripts/02_content/exploratory_data_visualization.R` — Reads 
   processed data and generates exploratory visualizations, exports 
   plots as .png files
+- `scripts/02_content/spatial_data_visualization.R` — Reads raw geolocation
+data and generates a world map of podcast listener distribution, exports map
+as .png file
 
 ### Processed Data
 
@@ -47,5 +52,12 @@ Exported figures are located in `figures/`:
 - `follower_growth.png` — Follower growth over time
 - `engagement_metrics.png` — Daily engagement metrics (comments and consumption time)
 - `platform_distribution.png` — Listener distribution by streaming platform
+
+### Maps
+
+Exported maps are located in `results/img/`:
+
+- `shark_awe_listener_map.png` — World map of podcast listener distribution
+across 46 countries during the first year of release
 
 
