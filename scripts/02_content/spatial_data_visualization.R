@@ -69,7 +69,7 @@ map <- ggplot() +
   theme_bw() +
   theme(legend.title = element_text(margin = margin(b = 10))) + #Add space between legend title and values
   labs(title = "Shark and Awe podcast listeners by country",
-       subtitle = "First year of podcast (August 2025 - August 2026)",
+       subtitle = "First year of podcast (August 1, 2025 - August 1, 2026)",
        x = "Longitude",
        y = "Latitude",
        caption = "Data source: Spotify for Creators") +
