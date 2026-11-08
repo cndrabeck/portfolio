@@ -4,7 +4,7 @@
 #
 # Candace Drabeck
 # cnd88@miami.edu
-# NOvember 15, 2026
+# November 15, 2026
 #
 # Working with spatial data to produce a map of my “study site”. This script
 # reads cleaned podcast listener data and creates a world map showing the
