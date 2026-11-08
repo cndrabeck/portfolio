@@ -60,4 +60,9 @@ Exported maps are located in `results/img/`:
 - `shark_awe_listener_map.png` — World map of podcast listener distribution
 across 46 countries during the first year of release
 
+## Project History/Notes
 
+- Data date ranges reflect data exports through November 8, 2026
+- Geolocation data covers the first year of the podcast (August 1, 2025 - August
+1, 2026)
+- Results folder structure uses `02_content` and reflects map images
