@@ -65,4 +65,5 @@ across 46 countries during the first year of release
 - Data date ranges reflect data exports through November 8, 2026
 - Geolocation data covers the first year of the podcast (August 1, 2025 - August
 1, 2026)
-- Results folder structure uses `02_content` and reflects map images
+- Scripts use `02_content` instead of `03_content`, as this class does not
+include an analysis step
