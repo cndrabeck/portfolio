@@ -22,9 +22,10 @@ library(sf)                #Spatial data
 library(rnaturalearth)     #World map data source
 library(rnaturalearthdata) #Create visual polygons
 library(ggspatial)         #Map creation and visualization
+library(here)
 
 ## Load raw data ##
-geo_raw <- read_csv("data/raw/geolocation.csv")
+geo_raw <- read_csv(here("data/raw/geolocation.csv"))
 
 ## Clean data -----------------------------------------------------------------
 geo_clean <- geo_raw |>           #Create a new object containing the cleaned data
@@ -85,7 +86,7 @@ map <- ggplot() +
                          style = north_arrow_fancy_orienteering())       #Style
 
 ## Export map in .png format --------------------------------------------------
-ggsave(filename = "results/img/shark_and_awe_listener_map.png",
+ggsave(filename = here("results/img/shark_and_awe_listener_map.png"),
        plot = map,
        width = 10,
        height = 6,
