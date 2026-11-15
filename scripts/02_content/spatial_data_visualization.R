@@ -22,7 +22,7 @@ library(sf)                #Spatial data
 library(rnaturalearth)     #World map data source
 library(rnaturalearthdata) #Create visual polygons
 library(ggspatial)         #Map creation and visualization
-library(here)
+library(here)              #Reproducible file paths
 
 ## Load raw data ##
 geo_raw <- read_csv(here("data/raw/geolocation.csv"))
